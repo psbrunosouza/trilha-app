@@ -2,7 +2,7 @@
   "name": "tree-track",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "pineorg",
+  "prefix": "trilha",
   "sourceRoot": "apps/tree-track/src",
   "tags": [],
   "targets": {

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { Menu, menu } from './menu';
 
 @Component({
-  selector: 'pineorg-root',
+  selector: 'trilha-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'tree-track';
+  menu: Menu[] = menu;
 }

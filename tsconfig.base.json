@@ -12,9 +12,14 @@
     "module": "esnext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "skipDefaultLibCheck": true,
+    "strictPropertyInitialization": false,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@pineorg/shared": ["libs/shared/src/index.ts"],
+      "@pineorg/trilha-ui": ["libs/trilha-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
