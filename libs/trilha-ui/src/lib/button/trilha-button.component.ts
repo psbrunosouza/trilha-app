@@ -22,7 +22,7 @@ type ColorStyles =
   | 'light'
   | 'dark';
 
-type RoundedStyles = 'full' | 'default' | 'none';
+type RoundedStyles = 'full' | 'sm' | 'none';
 
 const Colors: Record<ColorStyles, { bg: string; text: string }> = {
   base: {
@@ -71,7 +71,7 @@ const Colors: Record<ColorStyles, { bg: string; text: string }> = {
 })
 export class TrilhaButtonComponent {
   @Input()
-  public rounded: RoundedStyles = 'default';
+  public rounded: RoundedStyles = 'sm';
 
   @Input()
   public color: ColorStyles = 'dark';
@@ -96,8 +96,8 @@ export class TrilhaButtonComponent {
 
   get roundedStyle(): string {
     const roundedStyle: Record<RoundedStyles, string> = {
-      full: 'rounded-full',
-      default: 'rounded-md px-4',
+      full: 'rounded-full min-w-[42px]',
+      sm: 'rounded-md px-4 w-full',
       none: 'rounded-none px-4',
     };
 

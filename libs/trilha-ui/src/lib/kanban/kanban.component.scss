@@ -1,0 +1,30 @@
+.category {
+
+}
+
+.category::before {
+  content: '';
+  width: 23px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  @apply  bg-base-300;
+  @apply rounded-md;
+  transition: all 0.2s ease-in-out 0.1s;
+}
+
+.category:hover::before {
+  width: 100%;
+}
+
+.category:hover .category-title {
+  display: none;
+}
+
+.category-percentage {
+  display: none;
+}
+
+.category:hover .category-percentage {
+  display: inline;
+}
