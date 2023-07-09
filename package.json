@@ -2,7 +2,9 @@
   "name": "@pineorg/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx serve tree-track --open"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.1.0",

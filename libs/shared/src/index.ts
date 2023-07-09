@@ -1,1 +1,2 @@
-export * from './lib/helpers/text-color-by-background';
+export * from './lib/interfaces';
+export * from './lib/services';

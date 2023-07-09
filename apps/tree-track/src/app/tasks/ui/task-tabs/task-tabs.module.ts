@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskTabsComponent } from './task-tabs.component';
-import { TrilhaButtonModule } from '@pineorg/trilha-ui';
-import {KanbanModule} from "../../../../../../../libs/trilha-ui/src/lib/kanban/kanban.module";
+import { KanbanModule, TrilhaButtonModule } from '@pineorg/trilha-ui';
 
 @NgModule({
   declarations: [TaskTabsComponent],

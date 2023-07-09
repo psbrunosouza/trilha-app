@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ICategory } from '@pineorg/shared';
 
 @Component({
   selector: 'trilha-kanban',
@@ -6,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./kanban.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class KanbanComponent {}
+export class KanbanComponent {
+  @Input() public categories: ICategory[] | null;
+
+  public $categoriesChecked(categories: ICategory[] | null): ICategory[] {
+    return categories ?? [];
+  }
+}

@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Tab, tabs } from './tabs';
+import { ICategory } from '@pineorg/shared';
 
 @Component({
   selector: 'trilha-task-tabs',
@@ -8,5 +9,7 @@ import { Tab, tabs } from './tabs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TaskTabsComponent {
+  @Input() public categories: ICategory[] | null;
+
   tabs: Tab[] = tabs;
 }

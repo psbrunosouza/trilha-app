@@ -1,0 +1,368 @@
+{
+  "sprint": [
+    {
+      "id": "1",
+      "createdAt": "2023-07-07T10:00:00.000Z",
+      "updatedAt": "2023-07-07T12:00:00.000Z",
+      "deletedAt": "2023-07-07T14:00:00.000Z",
+      "description": "Descrição da sprint",
+      "startDate": "2023-07-10T00:00:00.000Z",
+      "endDate": "2023-07-20T00:00:00.000Z",
+      "categories": [
+        {
+          "title": "Categoria 1",
+          "color": "#FF0000",
+          "tasks": [
+            {
+              "id": "1",
+              "createdAt": "2023-07-08T09:00:00.000Z",
+              "updatedAt": "2023-07-08T11:00:00.000Z",
+              "deletedAt": "2023-07-08T13:00:00.000Z",
+              "level": "Alto",
+              "title": "Tarefa 1",
+              "description": "Descrição da tarefa 1",
+              "tags": ["tag1", "tag2"],
+              "participants": [
+                {
+                  "id": "1",
+                  "createdAt": "2023-07-06T09:00:00.000Z",
+                  "updatedAt": "2023-07-06T11:00:00.000Z",
+                  "deletedAt": "2023-07-06T13:00:00.000Z",
+                  "name": "Usuário 1",
+                  "email": "usuario1@example.com"
+                },
+                {
+                  "id": "2",
+                  "createdAt": "2023-07-05T09:00:00.000Z",
+                  "updatedAt": "2023-07-05T11:00:00.000Z",
+                  "deletedAt": "2023-07-05T13:00:00.000Z",
+                  "name": "Usuário 2",
+                  "email": "usuario2@example.com"
+                }
+              ],
+              "isDone": false,
+              "isLoop": true,
+              "category": {
+                "title": "Categoria 1",
+                "color": "#FF0000",
+                "tasks": [],
+                "sprint": null
+              }
+            },
+            {
+              "id": "2",
+              "createdAt": "2023-07-09T09:00:00.000Z",
+              "updatedAt": "2023-07-09T11:00:00.000Z",
+              "deletedAt": "2023-07-09T13:00:00.000Z",
+              "level": "Baixo",
+              "title": "Tarefa 2",
+              "description": "Descrição da tarefa 2",
+              "tags": ["tag3", "tag4"],
+              "participants": [
+                {
+                  "id": "1",
+                  "createdAt": "2023-07-06T09:00:00.000Z",
+                  "updatedAt": "2023-07-06T11:00:00.000Z",
+                  "deletedAt": "2023-07-06T13:00:00.000Z",
+                  "name": "Usuário 1",
+                  "email": "usuario1@example.com"
+                },
+                {
+                  "id": "3",
+                  "createdAt": "2023-07-04T09:00:00.000Z",
+                  "updatedAt": "2023-07-04T11:00:00.000Z",
+                  "deletedAt": "2023-07-04T13:00:00.000Z",
+                  "name": "Usuário 3",
+                  "email": "usuario3@example.com"
+                }
+              ],
+              "isDone": false,
+              "isLoop": false,
+              "category": {
+                "title": "Categoria 1",
+                "color": "#FF0000",
+                "tasks": [],
+                "sprint": null
+              }
+            }
+          ]
+        },
+        {
+          "title": "Categoria 2",
+          "color": "#00FF00",
+          "tasks": [
+            {
+              "id": "3",
+              "createdAt": "2023-07-11T09:00:00.000Z",
+              "updatedAt": "2023-07-11T11:00:00.000Z",
+              "deletedAt": "2023-07-11T13:00:00.000Z",
+              "level": "Médio",
+              "title": "Tarefa 3",
+              "description": "Descrição da tarefa 3",
+              "tags": ["tag5"],
+              "participants": [
+                {
+                  "id": "2",
+                  "createdAt": "2023-07-05T09:00:00.000Z",
+                  "updatedAt": "2023-07-05T11:00:00.000Z",
+                  "deletedAt": "2023-07-05T13:00:00.000Z",
+                  "name": "Usuário 2",
+                  "email": "usuario2@example.com"
+                },
+                {
+                  "id": "3",
+                  "createdAt": "2023-07-04T09:00:00.000Z",
+                  "updatedAt": "2023-07-04T11:00:00.000Z",
+                  "deletedAt": "2023-07-04T13:00:00.000Z",
+                  "name": "Usuário 3",
+                  "email": "usuario3@example.com"
+                }
+              ],
+              "isDone": true,
+              "isLoop": false,
+              "category": {
+                "title": "Categoria 2",
+                "color": "#00FF00",
+                "tasks": [],
+                "sprint": null
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "title": "Categoria 1",
+      "color": "#FF0000",
+      "tasks": [
+        {
+          "id": "1",
+          "createdAt": "2023-07-08T09:00:00.000Z",
+          "updatedAt": "2023-07-08T11:00:00.000Z",
+          "deletedAt": "2023-07-08T13:00:00.000Z",
+          "level": "Alto",
+          "title": "Tarefa 1",
+          "description": "Descrição da tarefa 1",
+          "tags": ["tag1", "tag2"],
+          "participants": [
+            {
+              "id": "1",
+              "createdAt": "2023-07-06T09:00:00.000Z",
+              "updatedAt": "2023-07-06T11:00:00.000Z",
+              "deletedAt": "2023-07-06T13:00:00.000Z",
+              "name": "Usuário 1",
+              "email": "usuario1@example.com"
+            },
+            {
+              "id": "2",
+              "createdAt": "2023-07-05T09:00:00.000Z",
+              "updatedAt": "2023-07-05T11:00:00.000Z",
+              "deletedAt": "2023-07-05T13:00:00.000Z",
+              "name": "Usuário 2",
+              "email": "usuario2@example.com"
+            }
+          ],
+          "isDone": false,
+          "isLoop": true,
+          "category": {
+            "title": "Categoria 1",
+            "color": "#FF0000",
+            "tasks": [],
+            "sprint": null
+          }
+        },
+        {
+          "id": "2",
+          "createdAt": "2023-07-09T09:00:00.000Z",
+          "updatedAt": "2023-07-09T11:00:00.000Z",
+          "deletedAt": "2023-07-09T13:00:00.000Z",
+          "level": "Baixo",
+          "title": "Tarefa 2",
+          "description": "Descrição da tarefa 2",
+          "tags": ["tag3", "tag4"],
+          "participants": [
+            {
+              "id": "1",
+              "createdAt": "2023-07-06T09:00:00.000Z",
+              "updatedAt": "2023-07-06T11:00:00.000Z",
+              "deletedAt": "2023-07-06T13:00:00.000Z",
+              "name": "Usuário 1",
+              "email": "usuario1@example.com"
+            },
+            {
+              "id": "3",
+              "createdAt": "2023-07-04T09:00:00.000Z",
+              "updatedAt": "2023-07-04T11:00:00.000Z",
+              "deletedAt": "2023-07-04T13:00:00.000Z",
+              "name": "Usuário 3",
+              "email": "usuario3@example.com"
+            }
+          ],
+          "isDone": false,
+          "isLoop": false,
+          "category": {
+            "title": "Categoria 1",
+            "color": "#FF0000",
+            "tasks": [],
+            "sprint": null
+          }
+        }
+      ]
+    },
+    {
+      "title": "Categoria 2",
+      "color": "#00FF00",
+      "tasks": [
+        {
+          "id": "3",
+          "createdAt": "2023-07-11T09:00:00.000Z",
+          "updatedAt": "2023-07-11T11:00:00.000Z",
+          "deletedAt": "2023-07-11T13:00:00.000Z",
+          "level": "Médio",
+          "title": "Tarefa 3",
+          "description": "Descrição da tarefa 3",
+          "tags": ["tag5"],
+          "participants": [
+            {
+              "id": "2",
+              "createdAt": "2023-07-05T09:00:00.000Z",
+              "updatedAt": "2023-07-05T11:00:00.000Z",
+              "deletedAt": "2023-07-05T13:00:00.000Z",
+              "name": "Usuário 2",
+              "email": "usuario2@example.com"
+            },
+            {
+              "id": "3",
+              "createdAt": "2023-07-04T09:00:00.000Z",
+              "updatedAt": "2023-07-04T11:00:00.000Z",
+              "deletedAt": "2023-07-04T13:00:00.000Z",
+              "name": "Usuário 3",
+              "email": "usuario3@example.com"
+            }
+          ],
+          "isDone": true,
+          "isLoop": false,
+          "category": {
+            "title": "Categoria 2",
+            "color": "#00FF00",
+            "tasks": [],
+            "sprint": null
+          }
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "createdAt": "2023-07-08T09:00:00.000Z",
+      "updatedAt": "2023-07-08T11:00:00.000Z",
+      "deletedAt": "2023-07-08T13:00:00.000Z",
+      "level": "Alto",
+      "title": "Tarefa 1",
+      "description": "Descrição da tarefa 1",
+      "tags": ["tag1", "tag2"],
+      "participants": [
+        {
+          "id": "1",
+          "createdAt": "2023-07-06T09:00:00.000Z",
+          "updatedAt": "2023-07-06T11:00:00.000Z",
+          "deletedAt": "2023-07-06T13:00:00.000Z",
+          "name": "Usuário 1",
+          "email": "usuario1@example.com"
+        },
+        {
+          "id": "2",
+          "createdAt": "2023-07-05T09:00:00.000Z",
+          "updatedAt": "2023-07-05T11:00:00.000Z",
+          "deletedAt": "2023-07-05T13:00:00.000Z",
+          "name": "Usuário 2",
+          "email": "usuario2@example.com"
+        }
+      ],
+      "isDone": false,
+      "isLoop": true,
+      "category": {
+        "title": "Categoria 1",
+        "color": "#FF0000",
+        "tasks": [],
+        "sprint": null
+      }
+    },
+    {
+      "id": "2",
+      "createdAt": "2023-07-09T09:00:00.000Z",
+      "updatedAt": "2023-07-09T11:00:00.000Z",
+      "deletedAt": "2023-07-09T13:00:00.000Z",
+      "level": "Baixo",
+      "title": "Tarefa 2",
+      "description": "Descrição da tarefa 2",
+      "tags": ["tag3", "tag4"],
+      "participants": [
+        {
+          "id": "1",
+          "createdAt": "2023-07-06T09:00:00.000Z",
+          "updatedAt": "2023-07-06T11:00:00.000Z",
+          "deletedAt": "2023-07-06T13:00:00.000Z",
+          "name": "Usuário 1",
+          "email": "usuario1@example.com"
+        },
+        {
+          "id": "3",
+          "createdAt": "2023-07-04T09:00:00.000Z",
+          "updatedAt": "2023-07-04T11:00:00.000Z",
+          "deletedAt": "2023-07-04T13:00:00.000Z",
+          "name": "Usuário 3",
+          "email": "usuario3@example.com"
+        }
+      ],
+      "isDone": false,
+      "isLoop": false,
+      "category": {
+        "title": "Categoria 1",
+        "color": "#FF0000",
+        "tasks": [],
+        "sprint": null
+      }
+    },
+    {
+      "id": "3",
+      "createdAt": "2023-07-11T09:00:00.000Z",
+      "updatedAt": "2023-07-11T11:00:00.000Z",
+      "deletedAt": "2023-07-11T13:00:00.000Z",
+      "level": "Médio",
+      "title": "Tarefa 3",
+      "description": "Descrição da tarefa 3",
+      "tags": ["tag5"],
+      "participants": [
+        {
+          "id": "2",
+          "createdAt": "2023-07-05T09:00:00.000Z",
+          "updatedAt": "2023-07-05T11:00:00.000Z",
+          "deletedAt": "2023-07-05T13:00:00.000Z",
+          "name": "Usuário 2",
+          "email": "usuario2@example.com"
+        },
+        {
+          "id": "3",
+          "createdAt": "2023-07-04T09:00:00.000Z",
+          "updatedAt": "2023-07-04T11:00:00.000Z",
+          "deletedAt": "2023-07-04T13:00:00.000Z",
+          "name": "Usuário 3",
+          "email": "usuario3@example.com"
+        }
+      ],
+      "isDone": true,
+      "isLoop": false,
+      "category": {
+        "title": "Categoria 2",
+        "color": "#00FF00",
+        "tasks": [],
+        "sprint": null
+      }
+    }
+  ]
+}
+

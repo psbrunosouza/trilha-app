@@ -1,15 +1,10 @@
 import {
-  AfterViewInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
   Component,
   ElementRef,
   Input,
-  Signal,
-  signal,
   ViewChild,
 } from '@angular/core';
-import { textColorByBackground } from '@pineorg/shared';
 
 type ColorStyles =
   | 'base'
