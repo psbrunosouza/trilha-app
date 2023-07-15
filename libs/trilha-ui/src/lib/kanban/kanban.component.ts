@@ -6,6 +6,7 @@ import { ICategory } from '@pineorg/shared';
   templateUrl: './kanban.component.html',
   styleUrls: ['./kanban.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [],
 })
 export class KanbanComponent {
   @Input() public categories: ICategory[] | null;

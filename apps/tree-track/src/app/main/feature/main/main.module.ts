@@ -1,24 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
-import { Route, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { LayoutModule } from '../../ui/layout/layout.module';
-
-export const mainRoutes: Route[] = [
-  {
-    path: '',
-    component: MainComponent,
-    children: [
-      {
-        path: 'tasks',
-        loadChildren: () =>
-          import('../../../tasks/feature/task-list/task-list.module').then(
-            (m) => m.TaskListModule
-          ),
-      },
-    ],
-  },
-];
+import { mainRoutes } from '../../../@routes/main.routes';
 
 @NgModule({
   declarations: [MainComponent],

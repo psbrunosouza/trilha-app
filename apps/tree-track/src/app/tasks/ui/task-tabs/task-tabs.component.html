@@ -1,5 +1,5 @@
 <div class="flex">
-  <trilha-button backgroundColor="light" color="dark" *ngFor="let tab of tabs"
+  <trilha-button backgroundColor="light" colorSchema="dark" *ngFor="let tab of tabs"
     ><span class="material-icons md-24">{{ tab.icon }}</span>
     <span>{{ tab.description }}</span></trilha-button
   >
@@ -7,6 +7,8 @@
 
 <hr class="text-gray-300" />
 
-<div class="py-2 h-fullxx">
-  <trilha-kanban [categories]="categories"></trilha-kanban>
-</div>
+<!--<div class="py-2 h-fullxx">-->
+<!--  <trilha-kanban  [categories]="categories"></trilha-kanban>-->
+<!--</div>-->
+
+<button (click)="openTheTcheca()">aaaa</button>

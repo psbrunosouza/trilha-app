@@ -1,10 +1,13 @@
 import {
+  AfterViewInit,
   ChangeDetectionStrategy,
-  Component,
   ElementRef,
+  Component,
   Input,
   ViewChild,
 } from '@angular/core';
+import chroma from 'chroma-js';
+import { getContrastingTextColor } from '@pineorg/shared';
 
 type ColorStyles =
   | 'base'
@@ -15,47 +18,31 @@ type ColorStyles =
   | 'warning'
   | 'info'
   | 'light'
-  | 'dark';
+  | 'dark'
+  | 'transparent';
 
 type RoundedStyles = 'full' | 'sm' | 'none';
 
-const Colors: Record<ColorStyles, { bg: string; text: string }> = {
-  base: {
-    bg: 'bg-base-300',
-    text: 'text-base-300',
-  },
-  contrast: {
-    bg: 'bg-contrast-300',
-    text: 'text-contrast-300',
-  },
-  highlight: {
-    bg: 'bg-highlight-300',
-    text: 'text-highlight-300',
-  },
-  success: {
-    bg: 'bg-success-300',
-    text: 'text-success-300',
-  },
-  danger: {
-    bg: 'bg-danger-300',
-    text: 'text-danger-300',
-  },
-  warning: {
-    bg: 'bg-warning-300',
-    text: 'text-warning-300',
-  },
-  dark: {
-    bg: 'bg-dark',
-    text: 'text-dark',
-  },
-  light: {
-    bg: 'bg-light',
-    text: 'text-light',
-  },
-  info: {
-    bg: 'bg-info-300',
-    text: 'text-info-300',
-  },
+const ColorSchema: Record<ColorStyles, string> = {
+  base: 'bg-base-300 hover:bg-base-400 transition duration-200 ease-in',
+  contrast:
+    'bg-contrast-300 hover:bg-contrast-400 transition duration-200 ease-in',
+  highlight:
+    'bg-highlight-300 hover:bg-highlight-400 transition duration-200 ease-in',
+  success:
+    'bg-success-300 hover:bg-success-400 transition duration-200 ease-in',
+  danger: 'bg-danger-300 hover:bg-danger-400 transition duration-200 ease-in',
+  warning:
+    'bg-warning-300 hover:bg-warning-400 transition duration-200 ease-in',
+  info: 'bg-info-300 hover:bg-info-400 transition duration-200 ease-in',
+  dark: 'bg-dark',
+  light: 'bg-light',
+  transparent: 'bg-transparent',
+};
+
+const TextColorSchema: Record<'dark' | 'light', string> = {
+  dark: 'text-dark',
+  light: 'text-light',
 };
 
 @Component({
@@ -64,29 +51,32 @@ const Colors: Record<ColorStyles, { bg: string; text: string }> = {
   styleUrls: ['./trilha-button.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TrilhaButtonComponent {
+export class TrilhaButtonComponent implements AfterViewInit {
   @Input()
   public rounded: RoundedStyles = 'sm';
 
   @Input()
-  public color: ColorStyles = 'dark';
-
-  @Input()
-  public backgroundColor: ColorStyles = 'base';
-
-  @ViewChild('button')
-  public button: ElementRef<HTMLButtonElement>;
-
-  get backgroundColorStyle(): string {
-    return `${
-      Colors[this.backgroundColor].bg
-    } hover:brightness-[1.15] transition ease-in delay-150`;
+  public set colorSchema(value: ColorStyles) {
+    if (value) {
+      this.color = ColorSchema[value];
+    }
   }
 
-  get colorStyle(): string {
-    return `${
-      Colors[this.color].text
-    } hover:brightness-[1.15] transition ease-in delay-150`;
+  @Input()
+  public disabled = false;
+
+  @ViewChild('button', { static: true })
+  public button: ElementRef<HTMLButtonElement>;
+
+  color: string;
+
+  ngAfterViewInit() {
+    const computedStyle = getComputedStyle(this.button.nativeElement);
+    const backgroundColor = computedStyle.backgroundColor;
+    const hexadecimalColor = chroma(backgroundColor).hex();
+    this.button.nativeElement.classList.add(
+      TextColorSchema[getContrastingTextColor(hexadecimalColor)]
+    );
   }
 
   get roundedStyle(): string {
@@ -99,7 +89,7 @@ export class TrilhaButtonComponent {
     return `${roundedStyle[this.rounded]}`;
   }
 
-  get buttonStyle(): string {
-    return `${this.roundedStyle} ${this.backgroundColorStyle} ${this.colorStyle}`;
+  get styles(): string {
+    return `${this.roundedStyle}`;
   }
 }

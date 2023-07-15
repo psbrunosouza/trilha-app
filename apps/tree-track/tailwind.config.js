@@ -8,5 +8,5 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   plugins: [],
-  presets: [require('../../tailwind.config')]
+  presets: [require('../../tailwind.config')],
 };

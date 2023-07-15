@@ -19,7 +19,10 @@
           "apps/tree-track/src/favicon.ico",
           "apps/tree-track/src/assets"
         ],
-        "styles": ["apps/tree-track/src/styles.scss"],
+        "styles": [
+          "apps/tree-track/src/styles.scss",
+          "@angular/cdk/overlay-prebuilt.css"
+        ],
         "scripts": []
       },
       "configurations": {
