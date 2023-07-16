@@ -1,0 +1,11 @@
+<div [ngClass]="[colorSchema[color], roundedStyle]" class="w-full overflow-hidden h-full shadow-md">
+  <div class="empty:hidden">
+    <ng-content select="[header]"></ng-content>
+  </div>
+  <div class="overflow-y-auto">
+    <ng-content select="[body]"></ng-content>
+  </div>
+  <div class="empty:hidden ">
+    <ng-content select="[footer]"></ng-content>
+  </div>
+</div>

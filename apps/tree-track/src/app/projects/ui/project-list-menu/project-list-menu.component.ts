@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'trilha-projects-view',
-  templateUrl: './project-list-view.component.html',
-  styleUrls: ['./project-list-view.component.scss'],
+  selector: 'trilha-projects-menu',
+  templateUrl: './project-list-menu.component.html',
+  styleUrls: ['./project-list-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProjectListViewComponent {
+export class ProjectListMenuComponent {
   selectedFilter: 'all' | 'favorites' = 'all';
 }

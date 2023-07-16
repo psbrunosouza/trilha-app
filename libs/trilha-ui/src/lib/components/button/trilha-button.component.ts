@@ -8,22 +8,9 @@ import {
 } from '@angular/core';
 import chroma from 'chroma-js';
 import { getContrastingTextColor } from '@pineorg/shared';
+import { RoundedStyles, Styles } from '../../interfaces';
 
-type ColorStyles =
-  | 'base'
-  | 'contrast'
-  | 'highlight'
-  | 'success'
-  | 'danger'
-  | 'warning'
-  | 'info'
-  | 'light'
-  | 'dark'
-  | 'transparent';
-
-type RoundedStyles = 'full' | 'sm' | 'none';
-
-const ColorSchema: Record<ColorStyles, string> = {
+const ColorSchema: Record<Styles, string> = {
   base: 'bg-base-300 hover:bg-base-400 transition duration-200 ease-in',
   contrast:
     'bg-contrast-300 hover:bg-contrast-400 transition duration-200 ease-in',
@@ -53,10 +40,10 @@ const TextColorSchema: Record<'dark' | 'light', string> = {
 })
 export class TrilhaButtonComponent implements AfterViewInit {
   @Input()
-  public rounded: RoundedStyles = 'sm';
+  public rounded: RoundedStyles = 'md';
 
   @Input()
-  public set colorSchema(value: ColorStyles) {
+  public set colorSchema(value: Styles) {
     if (value) {
       this.color = ColorSchema[value];
     }
@@ -82,7 +69,9 @@ export class TrilhaButtonComponent implements AfterViewInit {
   get roundedStyle(): string {
     const roundedStyle: Record<RoundedStyles, string> = {
       full: 'rounded-full min-w-[42px]',
-      sm: 'rounded-md px-4 w-full',
+      sm: 'rounded-sm px-4',
+      md: 'rounded-md px-4',
+      lg: 'rounded-lg px-4',
       none: 'rounded-none px-4',
     };
 

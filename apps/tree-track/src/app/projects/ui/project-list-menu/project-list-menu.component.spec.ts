@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProjectListViewComponent } from './project-list-view.component';
+import { ProjectListMenuComponent } from './project-list-menu.component';
 
 describe('ProjectListViewComponent', () => {
-  let component: ProjectListViewComponent;
-  let fixture: ComponentFixture<ProjectListViewComponent>;
+  let component: ProjectListMenuComponent;
+  let fixture: ComponentFixture<ProjectListMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ProjectListViewComponent],
+      declarations: [ProjectListMenuComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ProjectListViewComponent);
+    fixture = TestBed.createComponent(ProjectListMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
