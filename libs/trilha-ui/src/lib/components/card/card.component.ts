@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { RoundedStyles, Styles } from '../../interfaces';
+import { Styles } from '../../interfaces';
 
 const ColorSchema: Record<Styles, string> = {
   base: 'bg-base-300 ',
@@ -14,6 +14,8 @@ const ColorSchema: Record<Styles, string> = {
   transparent: 'bg-transparent',
 };
 
+type CardRoundedStyle = 'sm' | 'md' | 'lg' | 'none';
+
 @Component({
   selector: 'trilha-card',
   templateUrl: './card.component.html',
@@ -23,17 +25,16 @@ const ColorSchema: Record<Styles, string> = {
 export class CardComponent {
   @Input() color: Styles = 'contrast';
 
-  @Input() rounded: RoundedStyles = 'md';
+  @Input() rounded: CardRoundedStyle = 'md';
 
   colorSchema = ColorSchema;
 
   get roundedStyle(): string {
-    const roundedStyle: Record<RoundedStyles, string> = {
-      full: 'rounded-full min-w-[42px]',
-      sm: 'rounded-sm px-4',
-      md: 'rounded-md px-4',
-      lg: 'rounded-lg px-4',
-      none: 'rounded-none px-4',
+    const roundedStyle: Record<CardRoundedStyle, string> = {
+      sm: 'rounded-sm',
+      md: 'rounded-md',
+      lg: 'rounded-lg',
+      none: 'rounded-none',
     };
 
     return `${roundedStyle[this.rounded]}`;

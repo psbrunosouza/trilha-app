@@ -13,3 +13,7 @@ export * from './kanban/kanban.module';
 export * from './button/trilha-button.component';
 
 export * from './button/trilha-button.module';
+
+export * from './icon-badge/icon-badge.module';
+
+export * from './icon-badge/icon-badge.component';
