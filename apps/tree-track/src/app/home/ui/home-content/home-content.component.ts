@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { menu } from '../../../menu';
 
 @Component({
-  selector: 'trilha-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+  selector: 'trilha-home-content',
+  templateUrl: './home-content.component.html',
+  styleUrls: ['./home-content.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LayoutComponent {
+export class HomeContentComponent {
   protected readonly menu = menu;
 }

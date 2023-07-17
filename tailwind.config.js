@@ -83,6 +83,13 @@ module.exports = {
         xl: '3.625rem',
         '2xl': '4.625rem',
       },
+      fontSize: {
+        sm: '12px',
+        md: '16px',
+        lg: '20px',
+        xl: '24px',
+        '2xl': '32px',
+      },
     },
   },
   plugins: [],

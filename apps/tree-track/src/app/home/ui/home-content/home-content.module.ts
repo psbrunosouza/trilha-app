@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LayoutComponent } from './layout.component';
+import { HomeContentComponent } from './home-content.component';
 import { RouterOutlet } from '@angular/router';
 import { TrilhaButtonModule } from '@pineorg/trilha-ui';
 
 @NgModule({
-  declarations: [LayoutComponent],
+  declarations: [HomeContentComponent],
   imports: [CommonModule, RouterOutlet, TrilhaButtonModule],
-  exports: [LayoutComponent],
+  exports: [HomeContentComponent],
 })
-export class LayoutModule {}
+export class HomeContentModule {}

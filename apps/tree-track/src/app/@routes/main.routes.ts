@@ -1,10 +1,10 @@
 import { Route } from '@angular/router';
-import { MainComponent } from '../main/feature/main/main.component';
+import { HomeComponent } from '../home/feature/home/home.component';
 
 export const mainRoutes: Route[] = [
   {
     path: '',
-    component: MainComponent,
+    component: HomeComponent,
     children: [
       {
         path: 'tasks',
