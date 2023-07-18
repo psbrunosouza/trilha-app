@@ -55,7 +55,7 @@ export class TrilhaButtonComponent implements AfterViewInit {
   @ViewChild('button', { static: true })
   public button: ElementRef<HTMLButtonElement>;
 
-  color: string;
+  color: string = ColorSchema['highlight'];
 
   ngAfterViewInit() {
     const computedStyle = getComputedStyle(this.button.nativeElement);
@@ -68,11 +68,11 @@ export class TrilhaButtonComponent implements AfterViewInit {
 
   get roundedStyle(): string {
     const roundedStyle: Record<RoundedStyles, string> = {
-      full: 'rounded-full min-w-[42px]',
-      sm: 'rounded-sm px-4',
-      md: 'rounded-md px-4',
-      lg: 'rounded-lg px-4',
-      none: 'rounded-none px-4',
+      full: 'rounded-full',
+      sm: 'rounded-sm px-6',
+      md: 'rounded-md px-6 ',
+      lg: 'rounded-lg px-6 ',
+      none: 'rounded-none px-6 ',
     };
 
     return `${roundedStyle[this.rounded]}`;
